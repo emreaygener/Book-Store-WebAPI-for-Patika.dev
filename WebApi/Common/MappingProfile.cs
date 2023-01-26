@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using AutoMapper;
 using WebApi.BookOperations.GetBooks;
+using WebApi.Entities;
 using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 
 namespace WebApi.Common
