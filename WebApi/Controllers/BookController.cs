@@ -5,12 +5,13 @@ using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
+using WebApi.Applications.BookOperations.Commands.CreateBook;
+using WebApi.Applications.BookOperations.Commands.DeleteBook;
+using WebApi.Applications.BookOperations.Queries.GetBooks;
+using WebApi.Applications.BookOperations.Commands.UpdateBook;
 using WebApi.DBOperations;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
+using static WebApi.Applications.BookOperations.Commands.CreateBook.CreateBookCommand;
+using WebApi.Applications.BookOperations.Queries.GetBookById;
 
 namespace WebApi.Controllers
 {
@@ -34,15 +35,15 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        [HttpGet("id")]
+        public IActionResult GetBookById(int id)
         {
             BooksViewModel result;
 
-            GetByIdQuery query = new GetByIdQuery(_context, _mapper);
+            GetBookByIdQuery query = new GetBookByIdQuery(_context, _mapper);
             query.BookId = id; //* => bu şekilde id injection yapılabilir
 
-            GetByIdQueryValidator validator = new();
+            GetBookByIdQueryValidator validator = new();
             validator.ValidateAndThrow(query);
 
             result = query.Handle();
@@ -66,7 +67,7 @@ namespace WebApi.Controllers
             return Ok();
         }
         //Put
-        [HttpPut("{id}")]
+        [HttpPut("id")]
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
 
@@ -81,7 +82,7 @@ namespace WebApi.Controllers
 
             return Ok();
         }
-        [HttpDelete("{id}")]
+        [HttpDelete("id")]
         public IActionResult DeleteBook(int id)
         {
 
@@ -190,15 +191,15 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetBookById(int id)
         {
             BooksViewModel result;
             try
             {
-                GetByIdQuery query = new GetByIdQuery(_context, _mapper);
+                GetBookByIdQuery query = new GetBookByIdQuery(_context, _mapper);
                 query.BookId = id; //* => bu şekilde id injection yapılabilir
 
-                GetByIdQueryValidator validator = new();
+                GetBookByIdQueryValidator validator = new();
                 validator.ValidateAndThrow(query);
 
                 result = query.Handle();
