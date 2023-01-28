@@ -12,6 +12,7 @@ using WebApi.Applications.BookOperations.Commands.UpdateBook;
 using WebApi.DBOperations;
 using static WebApi.Applications.BookOperations.Commands.CreateBook.CreateBookCommand;
 using WebApi.Applications.BookOperations.Queries.GetBookById;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Controllers
 {

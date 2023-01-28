@@ -4,6 +4,7 @@ using System.Linq;
 using AutoMapper;
 using WebApi.Applications.GenreOperations.Queries.GetGenres;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.GenreOperations.Queries.GetGenreById
 {

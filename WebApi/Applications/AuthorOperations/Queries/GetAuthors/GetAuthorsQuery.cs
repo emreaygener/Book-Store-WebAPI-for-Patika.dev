@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.AuthorOperations.Queries.GetAuthors
 {
@@ -23,12 +24,5 @@ namespace WebApi.Applications.AuthorOperations.Queries.GetAuthors
 
             return _mapper.Map<List<AuthorsViewModel>>(authorsList);
         }
-    }
-
-    public class AuthorsViewModel
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public DateTime DateOfBirth { get; set; }
     }
 }

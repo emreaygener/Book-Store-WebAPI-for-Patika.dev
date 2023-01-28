@@ -7,6 +7,7 @@ using WebApi.Applications.AuthorOperations.Commands.UpdateBook;
 using WebApi.Applications.AuthorOperations.Queries.GetAuthorById;
 using WebApi.Applications.AuthorOperations.Queries.GetAuthors;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.Controllers
 {
@@ -46,7 +47,7 @@ namespace WebApi.Applications.Controllers
         [HttpPost]
         public IActionResult CreateAuthor([FromBody] AuthorsViewModel newAuthor)
         {
-            CreateAuthorCommand command = new(_context);
+            CreateAuthorCommand command = new(_context,_mapper);
 
             command.Model = newAuthor;
 

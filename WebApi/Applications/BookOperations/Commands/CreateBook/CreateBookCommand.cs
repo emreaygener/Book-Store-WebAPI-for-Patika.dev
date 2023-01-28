@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
 using WebApi.Entities;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.BookOperations.Commands.CreateBook
 {
@@ -31,14 +32,6 @@ namespace WebApi.Applications.BookOperations.Commands.CreateBook
             
             _dbContext.Books.Add(book);
             _dbContext.SaveChanges();
-        }
-
-        public class CreateBookModel
-        {
-            public string Title { get; set; }
-            public int GenreId { get; set; }
-            public int PageCount { get; set; }
-            public DateTime PublishDate { get; set; }
         }
     }
 }

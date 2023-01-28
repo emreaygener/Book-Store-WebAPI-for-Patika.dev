@@ -1,7 +1,10 @@
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.Applications.AuthorOperations.Queries.GetAuthors;
 using WebApi.DBOperations;
+using WebApi.Entities;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.AuthorOperations.Commands.CreateBook
 {
@@ -9,10 +12,12 @@ namespace WebApi.Applications.AuthorOperations.Commands.CreateBook
     {
         public AuthorsViewModel Model { get; set; }
         private readonly BookStoreDbContext _context;
+        private readonly IMapper _mapper;
 
-        public CreateAuthorCommand(BookStoreDbContext context)
+        public CreateAuthorCommand(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public void Handle()
@@ -22,10 +27,7 @@ namespace WebApi.Applications.AuthorOperations.Commands.CreateBook
             if (author is not null)
                 throw new InvalidOperationException("Yazar zaten mevcut!");
 
-            author = new Entities.Author();
-            author.Name = Model.Name;
-            author.Surname = Model.Surname;
-            author.DateOfBirth = Model.DateOfBirth;
+            author = _mapper.Map<Author>(Model);
 
             _context.Authors.Add(author);
             _context.SaveChanges();

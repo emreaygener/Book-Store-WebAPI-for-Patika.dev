@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
 using WebApi.Entities;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.BookOperations.Queries.GetBooks
 {
@@ -20,7 +21,7 @@ namespace WebApi.Applications.BookOperations.Queries.GetBooks
 
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dbContext.Books.Include(x => x.Genre).OrderBy(x => x.Id).ToList<Book>();
+            var bookList = _dbContext.Books.Include(x => x.Genre).Include(x=>x.Author).OrderBy(x => x.Id).ToList<Book>();
             List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);       // new();
             // foreach (var book in bookList)
             // {
@@ -33,13 +34,5 @@ namespace WebApi.Applications.BookOperations.Queries.GetBooks
             // }
             return vm;
         }
-    }
-
-    public class BooksViewModel
-    {
-        public string Title { get; set; }
-        public string Genre { get; set; }
-        public int PageCount { get; set; }
-        public string PublishDate { get; set; }
     }
 }

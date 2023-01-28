@@ -11,6 +11,7 @@ using WebApi.Applications.GenreOperations.Queries.GetGenreById;
 using WebApi.Applications.GenreOperations.Commands.CreateGenre;
 using WebApi.Applications.GenreOperations.Commands.UpdateGenre;
 using WebApi.Applications.GenreOperations.Commands.DeleteGenre;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Controllers
 {

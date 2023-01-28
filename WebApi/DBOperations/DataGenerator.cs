@@ -8,67 +8,79 @@ namespace WebApi.DBOperations
 {
     public class DataGenerator
     {
-        public static void Initialize (IServiceProvider serviceProvider)
+        public static void Initialize(IServiceProvider serviceProvider)
         {
-            using(var context = new BookStoreDbContext(serviceProvider.GetService<DbContextOptions<BookStoreDbContext>>()))
+            using (var context = new BookStoreDbContext(serviceProvider.GetService<DbContextOptions<BookStoreDbContext>>()))
             {
-                if(context.Books.Any())
+                if (context.Books.Any())
                     return;
 
                 context.Genres.AddRange
                 (
-                    new Genre{
+                    new Genre
+                    {
                         Name = "Personal Growth"
                     },
-                    new Genre{
+                    new Genre
+                    {
                         Name = "Science Fiction"
                     },
-                    new Genre{
+                    new Genre
+                    {
                         Name = "Romance"
                     }
                 );
 
                 context.Authors.AddRange
                 (
-                    new Author{
-                        Name = "Ömer",
-                        Surname = "Seyfettin",
-                        DateOfBirth = new DateTime(1884,03,11)
+                    new Author
+                    {
+                        Name = "Eric",
+                        Surname = "Ries",
+                        DateOfBirth = new DateTime(1978, 09, 22)
                     },
-                    new Author{
-                        Name = "Albert",
-                        Surname = "Camus",
-                        DateOfBirth = new DateTime(1913,11,07)
+                    new Author
+                    {
+                        Name = "Charlotte Perkins",
+                        Surname = "Gilman",
+                        DateOfBirth = new DateTime(1860, 07, 03)
                     },
-                    new Author{
-                        Name = "J.K.",
-                        Surname = "Rowling",
-                        DateOfBirth = new DateTime(1965,07,31)
+                    new Author
+                    {
+                        Name = "Frank Patrick",
+                        Surname = "Herbert",
+                        DateOfBirth = new DateTime(1920, 10, 08)
                     }
                 );
 
                 context.Books.AddRange
                 (
-                    new Book{
+                    new Book
+                    {
                         // Id=1,
-                        Title="Lean Startup",
-                        GenreId=1, 
+                        Title = "Lean Startup",
+                        GenreId = 1,
+                        AuthorId = 1,
                         PageCount = 200,
-                        PublishDate = new DateTime(2001,06,12)
+                        PublishDate = new DateTime(2001, 06, 12)
                     },
-                    new Book{
+                    new Book
+                    {
                         // Id=2,
-                        Title="Herland",
-                        GenreId=2, 
+                        Title = "Herland",
+                        GenreId = 2,
+                        AuthorId = 2,
                         PageCount = 250,
-                        PublishDate = new DateTime(2010,05,23)
+                        PublishDate = new DateTime(2010, 05, 23)
                     },
-                    new Book{
+                    new Book
+                    {
                         // Id=3,
-                        Title="Dune",
-                        GenreId=2, 
+                        Title = "Dune",
+                        GenreId = 2,
+                        AuthorId = 3,
                         PageCount = 540,
-                        PublishDate = new DateTime(2001,12,21)
+                        PublishDate = new DateTime(2001, 12, 21)
                     }
                 );
 

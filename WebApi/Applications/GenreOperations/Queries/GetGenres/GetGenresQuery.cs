@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.GenreOperations.Queries.GetGenres
 {
@@ -23,11 +24,5 @@ namespace WebApi.Applications.GenreOperations.Queries.GetGenres
 
             return returnObj;
         }
-    }
-
-    public class GenresViewModel
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
     }
 }

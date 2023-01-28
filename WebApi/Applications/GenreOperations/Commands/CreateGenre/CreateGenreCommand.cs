@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.GenreOperations.Commands.CreateGenre
 {
@@ -28,10 +29,5 @@ namespace WebApi.Applications.GenreOperations.Commands.CreateGenre
             
         }
 
-    }
-
-    public class CreateGenreModel
-    {
-        public string Name { get; set; }
     }
 }

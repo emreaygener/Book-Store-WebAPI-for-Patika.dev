@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using WebApi.Applications.AuthorOperations.Queries.GetAuthors;
 using WebApi.DBOperations;
+using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.AuthorOperations.Queries.GetAuthorById
 {

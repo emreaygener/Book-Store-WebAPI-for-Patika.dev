@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\webapi\\WebApi.csproj": {}
+    "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\webapi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\webapi\\WebApi.csproj": {
+    "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\webapi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\webapi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\webapi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\webapi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\webapi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\webapi\\obj\\",
+        "outputPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"

@@ -18,6 +18,10 @@ namespace WebApi.Applications.AuthorOperations.Commands.DeleteBook
         public void Handle()
         {
             var author = _context.Authors.SingleOrDefault(x => x.Id == AuthorId);
+            var books = _context.Books.Where(x=>x.AuthorId==AuthorId).OrderBy(x=>x.Id).ToList();
+            
+            if (books.Count!=0)
+                throw new InvalidOperationException("Yayında yazarın "+books.Count+" adet kitabı bulunmaktadır. Yazarların silinebilmesi için önce kitapları silinmelidir.");
 
             if (author is null)
                 throw new InvalidOperationException("Yazar bulunamadı!");
