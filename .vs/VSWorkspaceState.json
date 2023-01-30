@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApi",
+    "\\WebApi\\Entities",
+    "\\WebApi\\Middlewares"
+  ],
+  "SelectedNode": "\\WebApi\\Middlewares\\CustomExceptionMiddleware.cs",
+  "PreviewInSolutionExplorer": false
+}
