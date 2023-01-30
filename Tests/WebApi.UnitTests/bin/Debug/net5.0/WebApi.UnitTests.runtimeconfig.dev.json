@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\emrea\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\emrea\\.nuget\\packages",
+      "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"
+    ]
+  }
+}
