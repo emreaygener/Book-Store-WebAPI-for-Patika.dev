@@ -23,7 +23,7 @@ namespace WebApi.Applications.BookOperations.Commands.CreateBook
         {
             var book = _dbContext.Books.SingleOrDefault(x=>x.Title==Model.Title);
             if (book is not null)
-                throw new InvalidOperationException("Kitap zaten mevcut");
+                throw new InvalidOperationException("Kitap zaten mevcut.");
             book = _mapper.Map<Book>(Model); //  new Book();
             // book.Title = Model.Title;
             // book.PublishDate = Model.PublishDate;
