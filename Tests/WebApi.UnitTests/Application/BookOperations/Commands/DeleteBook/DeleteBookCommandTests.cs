@@ -48,5 +48,18 @@ namespace Application.BookOperations.Commands.DeleteBook
                 .Should().Throw<InvalidOperationException>()
                 .And.Message.Should().Be("Böyle bir kitap bulunamadı!");
         }
+
+        [Fact]
+        public void WhenValidInputsAreGiven_Book_ShouldBeDeleted()
+        {
+            //Arrange
+            DeleteBookCommand command=new(_context);
+            command.BookId=_context.Books.OrderBy(x=>x.Id).First().Id;
+            //Act
+            FluentActions.Invoking(()=>command.Handle()).Invoke();
+            //Assert
+            var book=_context.Books.SingleOrDefault(book=>book.Id==command.BookId);
+            book.Should().BeNull();
+        }
     }
 }

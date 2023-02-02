@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
+    "c:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
+    "c:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectUniqueName": "c:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "projectName": "WebApi.UnitTests",
-        "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectPath": "c:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\obj\\",
+        "outputPath": "c:\\Users\\emrea\\Desktop\\dotNet\\bookstore\\Tests\\WebApi.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"
