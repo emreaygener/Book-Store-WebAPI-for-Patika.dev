@@ -7508,40 +7508,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emrea\\.nuget\\packages\\": {},
-    "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages": {}
+    "/Users/edaaygener/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\emrea\\desktop\\dotnet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+      "projectUniqueName": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj",
       "projectName": "WebApi.UnitTests",
-      "projectPath": "c:\\Users\\emrea\\desktop\\dotnet\\bookstore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\emrea\\desktop\\dotnet\\bookstore\\Tests\\WebApi.UnitTests\\obj\\",
+      "projectPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj",
+      "packagesPath": "/Users/edaaygener/.nuget/packages/",
+      "outputPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\emrea\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/edaaygener/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj": {
-              "projectPath": "c:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj"
+            "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj": {
+              "projectPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj"
             }
           }
         }
@@ -7609,7 +7601,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
