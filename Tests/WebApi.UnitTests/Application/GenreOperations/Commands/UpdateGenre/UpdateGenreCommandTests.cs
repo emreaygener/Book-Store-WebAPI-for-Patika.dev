@@ -39,7 +39,7 @@ namespace Application.GenreOperations.Commands.UpdateGenre
         {
             //Arrange
             UpdateGenreCommand command=new(_context);
-            UpdateGenreViewModel model = new(){Name="Hobbit",IsActive=true};  
+            UpdateGenreViewModel model = new(){Name="Hoblbit",IsActive=true};  
             command.GenreId=id;
             command.Model=model;
             //Act
