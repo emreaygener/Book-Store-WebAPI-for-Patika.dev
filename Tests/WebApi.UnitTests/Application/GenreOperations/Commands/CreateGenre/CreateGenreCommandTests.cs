@@ -37,7 +37,7 @@ namespace Application.GenreOperations.Commands.CreateGenre
             FluentActions
                 .Invoking(()=>command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Kitap zaten mevcut.");
+                .And.Message.Should().Be("Kitap türü zaten mevcut!");
         }
 
         [Fact]

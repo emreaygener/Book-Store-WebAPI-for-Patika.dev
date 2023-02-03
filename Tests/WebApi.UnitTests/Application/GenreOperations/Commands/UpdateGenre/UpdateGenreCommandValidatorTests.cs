@@ -18,12 +18,12 @@ namespace Application.GenreOperations.Commands.UpdateGenre
 
         [Theory]
         [InlineData(0,"az",true)]
-        [InlineData(-1,"azz",true)]
-        [InlineData(-1,"bazz",true)]
-        [InlineData(1,"zz",true)]
-        [InlineData(1,"buzz",true)]
-        [InlineData(1,"buzz",true)]
-        [InlineData(1,"buzz",true)]
+        [InlineData(1,"az",true)]
+        [InlineData(0,"azzzz",true)]
+        [InlineData(-1,"zz",true)]
+        [InlineData(-1,"zzzz",true)]
+        [InlineData(0,"",true)]
+        [InlineData(0,"string",true)]
         public void WhenInvalidInputIsGiven_Validator_ShouldReturnError(int id,string Name,bool IsActive)
         {
             //Arrange

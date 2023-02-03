@@ -29,7 +29,7 @@ namespace Application.AuthorOperations.Queries.GetAuthorById
             FluentActions
                 .Invoking(()=>query.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Kitap mevcut değil!");
+                .And.Message.Should().Be("Yazar zaten mevcut!");
         }
 
         [Fact]

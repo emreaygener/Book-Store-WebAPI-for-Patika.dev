@@ -11,18 +11,15 @@ namespace Application.GenreOperations.Commands.CreateGenre
 {
     public class CreateGenreCommandValidatorTests : IClassFixture<CommonTestFixture>
     {
+        private readonly BookStoreDbContext _context;
+        public CreateGenreCommandValidatorTests(CommonTestFixture testFixture)
+        {
+            _context=testFixture.Context;
+        }
         [Theory]
-        [InlineData("Lord Of The Rings")]
-        [InlineData("Lord Of The Rings")]
-        [InlineData("Lord Of The Rings")]
         [InlineData("")]
-        [InlineData("")]
-        [InlineData("")]
-        [InlineData("Lor")]
-        [InlineData("Lord")]
-        [InlineData("Lord")]
-        [InlineData("Lord")]
-        [InlineData("Lord")]
+        [InlineData("Lr")]
+        [InlineData("L")]
         [InlineData(" ")]
 
         public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string Name)
@@ -40,21 +37,9 @@ namespace Application.GenreOperations.Commands.CreateGenre
         }
 
         [Fact]
-        public void WhenDateTimeEqualNowIsGiven_Validator_ShouldBeReturnError()
-        {
-            CreateGenreCommand command = new(null);
-            command.Model = new(){Name = "Lord Of The Rings"};
-            
-            CreateGenreCommandValidator validator=new();
-            var result = validator.Validate(command);
-
-            result.Errors.Count.Should().BeGreaterThan(0);
-        }
-
-        [Fact]
         public void WhenValidInputsAreGiven_Validator_ShouldNotBeReturnError()
         {
-            CreateGenreCommand command = new(null);
+            CreateGenreCommand command = new CreateGenreCommand(_context);
             command.Model = new(){Name = "Lord Of The Rings"};
             
             CreateGenreCommandValidator validator=new();

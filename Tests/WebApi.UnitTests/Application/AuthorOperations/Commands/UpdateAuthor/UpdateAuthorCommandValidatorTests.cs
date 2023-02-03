@@ -17,14 +17,10 @@ namespace Application.AuthorOperations.Commands.UpdateAuthor
         }
 
         [Theory]
-        [InlineData(0,"az","0",0,0)]
-        [InlineData(-1,"azz","10",0,0)]
-        [InlineData(-1,"bazz","10",1,1)]
-        [InlineData(1,"zz","10",1,1)]
-        [InlineData(1,"buzz",-1,1,1)]
-        [InlineData(1,"buzz","10",-1,1)]
-        [InlineData(1,"buzz","10",1,-1)]
-        public void WhenInvalidInputIsGiven_Validator_ShouldReturnError(int id,string Name,string Surname,int GenreId,int AuthorId)
+        [InlineData(0,"az","0")]
+        [InlineData(-1,"azz","10")]
+        [InlineData(-1,"bazz","10")]
+        public void WhenInvalidInputIsGiven_Validator_ShouldReturnError(int id,string Name,string Surname)
         {
             //Arrange
             UpdateAuthorCommand command = new(null);

@@ -31,13 +31,13 @@ namespace Application.AuthorOperations.Commands.CreateAuthor
             _context.SaveChanges();
 
             CreateAuthorCommand command=new(_context,_mapper);
-            command.Model=new(){Name=Author.Name,Surname=Author.Surname};
+            command.Model=new(){Name=Author.Name,Surname=Author.Surname,DateOfBirth=new System.DateTime(1990,01,10)};
 
             //Act (Çalıştırma) & Assert (Doğrulama)
             FluentActions
                 .Invoking(()=>command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Yazar zaten mevcut.");
+                .And.Message.Should().Be("Yazar zaten mevcut!");
         }
 
         [Fact]

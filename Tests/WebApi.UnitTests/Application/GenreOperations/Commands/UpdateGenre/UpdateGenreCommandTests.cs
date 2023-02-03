@@ -29,7 +29,7 @@ namespace Application.GenreOperations.Commands.UpdateGenre
             FluentActions
                         .Invoking(()=>command.Handle())
                         .Should().Throw<InvalidOperationException>()
-                        .And.Message.Should().Be("Kitap mevcut değil!");
+                        .And.Message.Should().Be("Kitap türü bulunamadı!");
             
         }
 

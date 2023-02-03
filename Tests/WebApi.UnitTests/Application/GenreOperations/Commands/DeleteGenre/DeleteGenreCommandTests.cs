@@ -32,7 +32,7 @@ namespace Application.GenreOperations.Commands.DeleteGenre
             FluentActions
                 .Invoking(() => command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Böyle bir kitap bulunamadı!");
+                .And.Message.Should().Be("Kitap türü bulunamadı!");
         }
 
 
@@ -40,21 +40,27 @@ namespace Application.GenreOperations.Commands.DeleteGenre
         public void WhenErasedGenreIdIsGiven_InvalidOperationException_ShouldBeReturned()
         {
             DeleteGenreCommand command = new(_context);
-            command.GenreId = _context.Genres.SingleOrDefault(x => x.Id == (_context.Genres.OrderBy(x => x.Id).First().Id)).Id;
+            Genre genre = new();
+            genre.Name="Test_tobeDeleted";
+            genre.IsActive=true;
+            command.GenreId = _context.Genres.OrderByDescending(x => x.Id).First().Id;
             command.Handle();
 
             FluentActions
                 .Invoking(() => command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Böyle bir kitap bulunamadı!");
+                .And.Message.Should().Be("Kitap türü bulunamadı!");
         }
 
         [Fact]
         public void WhenValidInputsAreGiven_Genre_ShouldBeDeleted()
         {
             //Arrange
-            DeleteGenreCommand command=new(_context);
-            command.GenreId=_context.Genres.OrderBy(x=>x.Id).First().Id;
+            DeleteGenreCommand command=new DeleteGenreCommand(_context);
+            Genre genre = new();
+            genre.Name="Test_tobeDeleted";
+            genre.IsActive=true;
+            command.GenreId=_context.Genres.OrderByDescending(x=>x.Id).First().Id;
             //Act
             FluentActions.Invoking(()=>command.Handle()).Invoke();
             //Assert

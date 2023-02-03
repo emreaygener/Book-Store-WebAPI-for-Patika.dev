@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x8jY7kw0MgunyJjblPAElAOH4z9twbXFxaZYSyKT+hZcfTPJVERCu51A7uyQqyZUbKw0MDUULXJ/3I0JJbSJOg==",
+  "dgSpecHash": "ZB6I1B40IZ/g7FAm5HIDqqFUgekV81bAs1J2Hx91efL6NCvS37rxfudrKNwSO7HoFE+s76XAP0uv4PzYuRvNCg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\emrea\\desktop\\dotnet\\bookstore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\emrea\\desktop\\dotnet\\bookstore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emrea\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\emrea\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

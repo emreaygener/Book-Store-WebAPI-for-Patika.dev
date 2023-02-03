@@ -29,7 +29,7 @@ namespace Application.AuthorOperations.Commands.UpdateAuthor
             FluentActions
                         .Invoking(()=>command.Handle())
                         .Should().Throw<InvalidOperationException>()
-                        .And.Message.Should().Be("Kitap mevcut değil!");
+                        .And.Message.Should().Be("Aradığınız yazar bulunamadı!");
             
         }
 

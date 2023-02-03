@@ -32,7 +32,7 @@ namespace Application.AuthorOperations.Commands.DeleteAuthor
             FluentActions
                 .Invoking(() => command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Böyle bir kitap bulunamadı!");
+                .And.Message.Should().Be("Yazar bulunamadı!");
         }
 
 
@@ -40,25 +40,38 @@ namespace Application.AuthorOperations.Commands.DeleteAuthor
         public void WhenErasedAuthorIdIsGiven_InvalidOperationException_ShouldBeReturned()
         {
             DeleteAuthorCommand command = new(_context);
-            command.AuthorId = _context.Authors.SingleOrDefault(x => x.Id == (_context.Authors.OrderBy(x => x.Id).First().Id)).Id;
+            Author author = new Author();
+            author.Name = "test";
+            author.Surname = "testt";
+            author.DateOfBirth = DateTime.Now.AddYears(-15);
+            _context.Authors.Add(author);
+            _context.SaveChanges();
+            command.AuthorId = _context.Authors.OrderByDescending(x => x.Id).First().Id;
             command.Handle();
 
             FluentActions
                 .Invoking(() => command.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Böyle bir kitap bulunamadı!");
+                .And.Message.Should().Be("Yazar bulunamadı!");
         }
 
         [Fact]
         public void WhenValidInputsAreGiven_Author_ShouldBeDeleted()
         {
+            DeleteAuthorCommand command = new(_context);
+            Author author = new Author();
+            author.Name = "test";
+            author.Surname = "testt";
+            author.DateOfBirth = DateTime.Now.AddYears(-15);
+            _context.Authors.Add(author);
+            _context.SaveChanges();
+
             //Arrange
-            DeleteAuthorCommand command=new(_context);
-            command.AuthorId=_context.Authors.OrderBy(x=>x.Id).First().Id;
+            command.AuthorId = _context.Authors.OrderByDescending(x => x.Id).First().Id;
             //Act
-            FluentActions.Invoking(()=>command.Handle()).Invoke();
+            FluentActions.Invoking(() => command.Handle()).Invoke();
             //Assert
-            var Author=_context.Authors.SingleOrDefault(Author=>Author.Id==command.AuthorId);
+            var Author = _context.Authors.SingleOrDefault(Author => Author.Id == command.AuthorId);
             Author.Should().BeNull();
         }
     }

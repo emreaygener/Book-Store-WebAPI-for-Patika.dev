@@ -12,20 +12,15 @@ namespace Application.AuthorOperations.Commands.CreateAuthor
     public class CreateAuthorCommandValidatorTests : IClassFixture<CommonTestFixture>
     {
         [Theory]
-        [InlineData("Lord Of The Rings","0",0,0)]
-        [InlineData("Lord Of The Rings","0",1,1)]
-        [InlineData("Lord Of The Rings","100",0,0)]
-        [InlineData("","0",0,0)]
-        [InlineData("","100",1,1)]
-        [InlineData("","0",1,1)]
-        [InlineData("Lor","100",1,1)]
-        [InlineData("Lord","100",0,0)]
-        [InlineData("Lord","0",1,1)]
-        [InlineData("Lord","10",0,1)]
-        [InlineData("Lord","10",1,0)]
-        [InlineData(" ","100",1,1)]
+        [InlineData("Lord Of The Rings","0")]
+        [InlineData("Lord Of The Rings","0")]
+        [InlineData("","0")]
+        [InlineData("","100")]
+        [InlineData("","0")]
+        [InlineData("Lord","0")]
+        [InlineData(" ","100")]
 
-        public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string Name,string Surname, int genreId, int authorId)
+        public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string Name,string Surname)
         {
             //Arrange
             CreateAuthorCommand command = new(null, null);
@@ -33,7 +28,7 @@ namespace Application.AuthorOperations.Commands.CreateAuthor
             {
                 Name = Name,
                 Surname = Surname,
-                DateOfBirth = DateTime.Now.Date.AddYears(-1),
+                DateOfBirth = DateTime.Now.Date.AddYears(-50),
             };
 
             //Act

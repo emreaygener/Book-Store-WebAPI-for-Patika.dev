@@ -29,7 +29,7 @@ namespace Application.GenreOperations.Queries.GetGenreById
             FluentActions
                 .Invoking(()=>query.Handle())
                 .Should().Throw<InvalidOperationException>()
-                .And.Message.Should().Be("Kitap mevcut değil!");
+                .And.Message.Should().Be("Kitap türü bulunamadı!");
         }
 
         [Fact]
