@@ -2,6 +2,7 @@ using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using WebApi.Applications.UserOperations.Commands.CreateToken;
 using WebApi.Applications.UserOperations.Commands.CreateUser;
 using WebApi.Applications.UserOperations.Queries.GetUsers;
 using WebApi.DBOperations;
@@ -36,6 +37,15 @@ namespace WebApi.Controllers
             command.Handle();
 
             return Ok();
+        }
+
+        [HttpPost]
+        public ActionResult<Token> CreateToken([FromBody]CreateTokenModel loginModel)
+        {
+            CreateTokenCommand command = new(_context,_configuration);
+            command.Model = loginModel;
+            var token = command.Handle();
+            return token;
         }
 
         [HttpGet]

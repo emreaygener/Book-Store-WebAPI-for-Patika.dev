@@ -69,5 +69,11 @@ namespace WebApi.Common
             public string Surname { get; set; }
             public string Email { get; set; }
         }
+
+        public class CreateTokenModel
+        {
+            public string Email { get; set; }
+            public string Password { get; set; }
+        }
     }
 }
