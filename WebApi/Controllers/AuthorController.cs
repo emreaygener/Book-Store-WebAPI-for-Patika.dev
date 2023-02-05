@@ -1,5 +1,6 @@
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Applications.AuthorOperations.Commands.CreateBook;
 using WebApi.Applications.AuthorOperations.Commands.DeleteBook;
@@ -11,6 +12,7 @@ using static WebApi.Common.ViewModels;
 
 namespace WebApi.Applications.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]s")]
     public class AuthorController:ControllerBase

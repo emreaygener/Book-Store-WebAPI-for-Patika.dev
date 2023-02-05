@@ -13,9 +13,11 @@ using WebApi.DBOperations;
 using static WebApi.Applications.BookOperations.Commands.CreateBook.CreateBookCommand;
 using WebApi.Applications.BookOperations.Queries.GetBookById;
 using static WebApi.Common.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]s")]
     public class BookController : ControllerBase

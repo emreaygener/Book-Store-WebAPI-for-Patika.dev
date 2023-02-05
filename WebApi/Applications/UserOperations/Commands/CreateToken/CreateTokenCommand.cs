@@ -19,7 +19,7 @@ namespace WebApi.Applications.UserOperations.Commands.CreateToken
             _configuration = configuration;
         }
 
-        public void Handle()
+        public Token Handle()
         {
             var user = _context.Users.FirstOrDefault(x=>x.Email==Model.Email&&x.Password==Model.Password);
             if(user is not null)
@@ -29,6 +29,10 @@ namespace WebApi.Applications.UserOperations.Commands.CreateToken
 
                 user.RefreshToken = token.RefreshToken;
                 user.RefreshTokenExpireDate= token.ExpirationDate.AddMinutes(5);
+
+                _context.SaveChanges();
+
+                return token;
             }
             else
             {

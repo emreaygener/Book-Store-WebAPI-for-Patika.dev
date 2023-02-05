@@ -6,6 +6,7 @@ using WebApi.Applications.UserOperations.Commands.CreateToken;
 using WebApi.Applications.UserOperations.Commands.CreateUser;
 using WebApi.Applications.UserOperations.Queries.GetUsers;
 using WebApi.DBOperations;
+using WebApi.TokenOperations.Models;
 using static WebApi.Common.ViewModels;
 
 namespace WebApi.Controllers
@@ -39,7 +40,7 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        [HttpPost("connect/token")]
         public ActionResult<Token> CreateToken([FromBody]CreateTokenModel loginModel)
         {
             CreateTokenCommand command = new(_context,_configuration);
