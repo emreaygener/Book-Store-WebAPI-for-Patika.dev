@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using AutoMapper;
-using WebApi.Applications.AuthorOperations.Queries.GetAuthors;
 using WebApi.DBOperations;
 using WebApi.Entities;
 using static WebApi.Common.ViewModels;
