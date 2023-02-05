@@ -1,33 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj": {}
+    "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\tests\\webapi.unittests\\WebApi.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj": {
+    "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\tests\\webapi.unittests\\WebApi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\tests\\webapi.unittests\\WebApi.UnitTests.csproj",
         "projectName": "WebApi.UnitTests",
-        "projectPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj",
-        "packagesPath": "/Users/edaaygener/.nuget/packages/",
-        "outputPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/Tests/WebApi.UnitTests/obj/",
+        "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\tests\\webapi.unittests\\WebApi.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\tests\\webapi.unittests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/edaaygener/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\emrea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj": {
-                "projectPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj"
+              "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj": {
+                "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj"
               }
             }
           }
@@ -95,26 +102,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj": {
+    "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/WebApi.csproj",
-        "packagesPath": "/Users/edaaygener/.nuget/packages/",
-        "outputPath": "/Users/edaaygener/Desktop/Model-Kullanimi-for-Patika.dev 19.18.46/WebApi/obj/",
+        "projectPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emrea\\Desktop\\dotNet\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual\\Shared components,tools, and SDKs\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/edaaygener/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\emrea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -144,6 +158,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[10.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -181,7 +199,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
