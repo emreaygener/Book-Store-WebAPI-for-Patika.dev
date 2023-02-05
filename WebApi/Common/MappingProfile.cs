@@ -20,6 +20,8 @@ namespace WebApi.Common
             CreateMap<Genre, GenresViewModel>();
             CreateMap<Author, AuthorsViewModel>();
             CreateMap<AuthorsViewModel, Author>();
+            CreateMap<CreateUserModel,User>();
+            CreateMap<User,UsersViewModel>();
         }
     }
 }

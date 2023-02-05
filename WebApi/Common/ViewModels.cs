@@ -54,5 +54,20 @@ namespace WebApi.Common
             public string Surname { get; set; }
             public DateTime DateOfBirth { get; set; }
         }
+
+        public class CreateUserModel
+        {
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string Email { get; set; }
+            public string Password { get; set; }
+        }
+
+        public class UsersViewModel
+        {
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string Email { get; set; }
+        }
     }
 }
